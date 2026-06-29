@@ -102,9 +102,14 @@
         <a href="#pricing">Course</a>
         <a href="#ebook">Ebook</a>
         <a href="#cakes">Order Cakes</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
         <a href="#register" class="btn">Register</a>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+        <span class="moon" aria-hidden="true">&#9789;</span>
+        <span class="sun" aria-hidden="true">&#9728;</span>
+      </button>
       <button class="burger" aria-label="Open menu" aria-controls="menu" aria-expanded="false">&#9776;</button>
     </nav>
   </header>
@@ -351,6 +356,63 @@
       </div>
     </section>
 
+    <!-- ============ BLOG ============ -->
+    <section class="section blog reveal" id="blog">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">From the Kitchen Journal</p>
+          <h2>Baking Tips &amp; Inspiration</h2>
+          <p class="lead">Friendly reads to help you bake with confidence between classes.</p>
+        </div>
+        <div class="bloggrid">
+          <article class="bcard">
+            <div class="ph"><img src="assets/cake-chocolate.webp" width="560" height="350" loading="lazy" alt="Slice of moist chocolate cake"></div>
+            <div class="body">
+              <p class="tag">Beginner Basics</p>
+              <h3>5 Secrets to a Moist Cake Every Time</h3>
+              <p>The small habits — from measuring to mixing — that make the difference between dry and dreamy.</p>
+              <a class="read" href="https://wa.me/254715274526?text=Hi!%20I'd%20love%20to%20read%20your%20baking%20tips." target="_blank" rel="noopener">Read more &#8594;</a>
+            </div>
+          </article>
+          <article class="bcard">
+            <div class="ph"><img src="assets/class-cookies.webp" width="560" height="350" loading="lazy" alt="Buttercream piping on a cake"></div>
+            <div class="body">
+              <p class="tag">Decoration</p>
+              <h3>Smooth Buttercream: A Simple Guide</h3>
+              <p>Get that clean, professional finish at home with a few gentle techniques anyone can learn.</p>
+              <a class="read" href="https://wa.me/254715274526?text=Hi!%20I'd%20love%20to%20read%20your%20baking%20tips." target="_blank" rel="noopener">Read more &#8594;</a>
+            </div>
+          </article>
+          <article class="bcard">
+            <div class="ph"><img src="assets/ebook-cover.webp" width="560" height="350" loading="lazy" alt="Step by step baking guide ebook"></div>
+            <div class="body">
+              <p class="tag">Getting Started</p>
+              <h3>Turning Baking Into a Small Business</h3>
+              <p>Thinking of selling your bakes? Here's how our students take their first confident steps.</p>
+              <a class="read" href="https://wa.me/254715274526?text=Hi!%20I'd%20love%20to%20read%20your%20baking%20tips." target="_blank" rel="noopener">Read more &#8594;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="section newsletter reveal" id="newsletter">
+      <div class="wrap">
+        <div class="newscard">
+          <p class="eyebrow">Stay in the Loop</p>
+          <h2>Sweet Updates in Your Inbox</h2>
+          <p>Join our newsletter for new class dates, recipes and baking tips. No spam — just the good stuff.</p>
+          <form id="newsform" class="newsform" novalidate>
+            <label for="news-email" class="visually-hidden" style="position:absolute;left:-9999px">Email address</label>
+            <input id="news-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+          <p class="newsnote" id="newsnote" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ HOW IT WORKS ============ -->
     <section class="section how reveal" id="how">
       <div class="wrap">
@@ -439,6 +501,14 @@
           <div class="way"><div class="ic" aria-hidden="true">&#128241;</div><b>WhatsApp</b><a href="https://wa.me/254715274526" target="_blank" rel="noopener">0715 274 526</a></div>
         </div>
         <p class="hours"><b>Business hours:</b> Mon–Sat, 8:00 AM – 6:00 PM (EAT)</p>
+        <div class="mapwrap">
+          <iframe
+            title="Stine Cakes and Pastries Academy location — Nairobi, Kenya"
+            src="https://www.google.com/maps?q=Nairobi,Kenya&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </section>
   </main>

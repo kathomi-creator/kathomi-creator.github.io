@@ -137,4 +137,46 @@
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- Dark mode ---------- */
+  var root = document.documentElement;
+  var toggle = document.querySelector(".theme-toggle");
+
+  function applyTheme(theme) {
+    if (theme === "dark") root.setAttribute("data-theme", "dark");
+    else root.removeAttribute("data-theme");
+    if (toggle) toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  }
+
+  // Initial theme: saved preference, else system preference
+  var saved = null;
+  try { saved = localStorage.getItem("theme"); } catch (e) {}
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    applyTheme("dark");
+  }
+
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      var isDark = root.getAttribute("data-theme") === "dark";
+      var next = isDark ? "light" : "dark";
+      applyTheme(next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  }
+
+  /* ---------- Newsletter signup ---------- */
+  var news = document.getElementById("newsform");
+  if (news) {
+    news.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var note = document.getElementById("newsnote");
+      news.reset();
+      if (note) {
+        note.textContent = "Thank you for subscribing! We'll be in touch with sweet updates.";
+        note.classList.add("show");
+      }
+    });
+  }
 })();
